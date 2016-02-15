@@ -1,5 +1,6 @@
 <?php
-    $nombre = "Proyecto Uno";
+    $nombre = "Proyecto 1";
+    $scripts = ["js/angular.min.js", "js/app.js"];
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +19,8 @@
         <pre>{{saludo}}</pre>
     </div>
 </div>
-<script src="js/angular.min.js"></script>
-<script src="js/app.js"></script>
+<?php foreach ($scripts as $script) { ?>
+    <script src="<?php echo($script); ?>"></script>
+<?php } ?>
 </body>
 </html>
