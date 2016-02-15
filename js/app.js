@@ -2,27 +2,29 @@ angular.module('proyectoUno', [])
     /**
      * Definimos un servicio que interactuará con el back-end.
      */
-    .service('SumatoriaService', ['$http', function($http) {
-        /**
-         * El método sumar toda dos enteros como parámetros
-         * @param primerValor
-         * @param segundoValor
-         * @returns String
-         */
-        var sumar = function sumar(primerValor, segundoValor) {
-            var url = 'sumador.php';
+    .service('SumatoriaService', ['$http',
+        function($http) {
+            /**
+             * El método sumar toda dos enteros como parámetros.
+             * @param primerValor
+             * @param segundoValor
+             * @returns String
+             */
+            var sumar = function sumar(primerValor, segundoValor) {
+                var url = 'controlador.php';
                 url += '?primerValor=' + primerValor;
                 url += '&segundoValor=' + segundoValor;
+                url += '&operacion=suma';
 
-            return $http({
-                url: url
-            });
-        };
+                return $http({
+                    url: url
+                });
+            };
 
-        return {
-            sumar: sumar
-        }
-    }])
+            return {
+                sumar: sumar
+            }
+        }])
     /**
      * Definimos un controlador que consume el servicio.
      */
