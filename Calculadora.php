@@ -1,6 +1,10 @@
 <?php
 
 class Calculadora {
+
+    // Lista de posibles operaciones
+    const SUMA = 'suma';
+
     /**
      * Toma el $primerValor y lo suma al $segundoValor;
      *
@@ -10,7 +14,7 @@ class Calculadora {
      */
     public function sumar($primerValor, $segundoValor) {
 
-        // Si $primerValor y $segundoValor estan definidas
+        // Si $primerValor y $segundoValor estan definidos
         if (isset($primerValor, $segundoValor)) {
             return $primerValor + $segundoValor;
         }
