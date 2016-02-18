@@ -1,7 +1,7 @@
 <?php
 
 // Incluye todo el contenido de Calculadora.php en este archivo
-include_once "Calculadora.php";
+require("Calculadora.php");
 
 $primerValor = $_REQUEST['primerValor'];
 $segundoValor = $_REQUEST['segundoValor'];

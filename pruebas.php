@@ -1,5 +1,7 @@
 <?php
 
+// Referencia de sintaxis
+
 // Variables:
 $cadenaDeTexto = "Hola Mundo!";
 $numero = 4;
