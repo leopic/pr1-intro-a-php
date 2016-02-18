@@ -1,13 +1,20 @@
 <?php
 
-// Incluye todo el contenido de Calculadora.php en este archivo
-include_once "Calculadora.php";
+// Incluye todo el contenido de CalculadoraService.php en este archivo
+require("CalculadoraService.php");
 
-$primerValor = $_REQUEST['primerValor'];
-$segundoValor =  $_REQUEST['segundoValor'];
-$operacion = $_REQUEST['operacion'];
+/**
+ * Existe una variable superglobal llamada `$_GET` que contiene un diccionario
+ * con todos los datos enviados en el URL.
+ */
+$primerValor = $_GET['primerValor'];
+$segundoValor =  $_GET['segundoValor'];
+$operacion = $_GET['operacion'];
 
-$calculadora = new Calculadora();
+// Obtenemos una instancia del servicio de calculadora
+$calculadora = new CalculadoraService();
+
+// Verificamos si la operacion solicitada se encuentra dentro de las disponibles
 if ($operacion == 'suma') {
     $resultado = $calculadora->sumar($primerValor, $segundoValor);
     $oracion = "El resultado de sumar " . $primerValor . " y " . $segundoValor . " es " . $resultado . ".";
@@ -15,4 +22,5 @@ if ($operacion == 'suma') {
     $oracion = 'Operacion no implementada';
 }
 
+// Enviamos de vuelta la oracion con el resultado
 echo($oracion);

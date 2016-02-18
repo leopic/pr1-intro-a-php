@@ -1,6 +1,7 @@
 <?php
 
-class Calculadora {
+class CalculadoraService {
+
     /**
      * Toma el $primerValor y lo suma al $segundoValor;
      *
