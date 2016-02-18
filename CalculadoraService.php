@@ -1,6 +1,6 @@
 <?php
 
-class Calculadora {
+class CalculadoraService {
 
     // Lista de posibles operaciones
     const SUMA = 'suma';

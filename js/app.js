@@ -16,7 +16,7 @@ angular.module('proyectoUno', [])
                 url += '&segundoValor=' + segundoValor;
                 url += '&operacion=suma';
 
-                return $http({url: url });
+                return $http({url: url});
             };
 
             return {
@@ -35,7 +35,8 @@ angular.module('proyectoUno', [])
 
                 $scope.sumar = function sumar() {
                     if ($scope.formularioSuma.$valid) {
-                        CalculadoraService.sumar($scope.primerValor, $scope.segundoValor)
+                        CalculadoraService
+                            .sumar($scope.primerValor, $scope.segundoValor)
                             .then(function(response) {
                                 if (response.data) {
                                     $scope.resultado = response.data;
