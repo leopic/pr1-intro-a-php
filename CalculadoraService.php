@@ -4,6 +4,8 @@ class CalculadoraService {
 
     // Lista de posibles operaciones
     const SUMA = 'suma';
+    const RESTA = 'resta';
+    const MULTIPLICACION = 'multiplicacion';
 
     /**
      * Toma el $primerValor y lo suma al $segundoValor;
@@ -21,4 +23,13 @@ class CalculadoraService {
 
         return null;
     }
+
+    public function restar($primerValor, $segundoValor) {
+        return $primerValor - $segundoValor;
+    }
+
+    public function multiplicar($primerValor, $segundoValor) {
+        return $primerValor * $segundoValor;
+    }
+
 }

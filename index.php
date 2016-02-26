@@ -15,28 +15,26 @@ $scripts = ["js/angular.min.js", "js/app.js"];
 <body>
 <div>
     <div class="col-md-4 col-md-offset-4">
-        <div class="page-header text-center">
-            <h1>Ejemplos PHP</h1>
-        </div>
-
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3>Sumando usando un formulario con $http</h3>
+                <h3>Calculadora</h3>
             </div>
             <div class="panel-body" ng-app="proyectoUno" ng-controller="ProyectoUnoController">
-                <form name="formularioSuma" ng-submit="sumar()" novalidate>
+                <p><pre>{{primerValor}}</pre></p>
+                <p><pre>{{segundoValor}}</pre></p>
+                <p><pre>{{operacionARealizar}}</pre></p>
+                <form name="formularioSuma" novalidate>
                     <div class="form-group">
-                        <label for="primerValor">Primer valor</label>
-                        <input type="text" class="form-control" id="primerValor"
-                               ng-model="primerValor" required />
+                        <a class="btn btn-primary" ng-click="presionar(1)">1</a>
+                        <a class="btn btn-primary" ng-click="presionar(2)">2</a>
+                        <a class="btn btn-primary" ng-click="presionar(3)">3</a>
                     </div>
                     <div class="form-group">
-                        <label for="segundoValor">Segundo valor</label>
-                        <input type="text" class="form-control" id="segundoValor"
-                               ng-model="segundoValor" required />
+                        <a class="btn btn-info" ng-click="suma()">+</a>
+                        <a class="btn btn-info" ng-click="resta()">-</a>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-default" type="submit">Sumar</button>
+                        <a class="btn btn-default" ng-click="calcular()">=</a>
                     </div>
                     <div class="form-group"><p>{{resultado}}</p></div>
                 </form>

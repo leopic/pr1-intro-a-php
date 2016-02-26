@@ -18,6 +18,12 @@ $calculadora = new CalculadoraService();
 if ($operacion == $calculadora::SUMA) {
     $resultado = $calculadora->sumar($primerValor, $segundoValor);
     $oracion = "El resultado de sumar " . $primerValor . " y " . $segundoValor . " es " . $resultado . ".";
+} elseif ($operacion == $calculadora::RESTA) {
+    $resultado = $calculadora->restar($primerValor, $segundoValor);
+    $oracion = "El resultado de restar " . $primerValor . " y " . $segundoValor . " es " . $resultado . ".";
+} elseif ($operacion == $calculadora::MULTIPLICACION) {
+    $resultado = $calculadora->multiplicar($primerValor, $segundoValor);
+    $oracion = "El resultado de multiplicar " . $primerValor . " y " . $segundoValor . " es " . $resultado . ".";
 } else {
     $oracion = 'Operacion no implementada';
 }
